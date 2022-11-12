@@ -1,8 +1,4 @@
 ##variáveis
-from optparse import OptionConflictError
-from pickletools import OpcodeInfo
-
-
 nome = "str"
 sexo = "str"
 optionSX = "str"

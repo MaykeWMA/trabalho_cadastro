@@ -7,7 +7,7 @@ EstadoCivil = "str"
 optionEC = "str"
 ##váriavel Nome e Sexo
 nome = str(input ("Qual o seu nome?: "))
-if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n"):
+if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m"):
     print(("Bem vinda(o) ")+(nome)+("!"))
     print ("Seu sexo é Feminio?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
@@ -21,7 +21,7 @@ if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endsw
             sexo = "Indefinido"
     else:
         print("Por favor ativar a função 'sexo' no menu apos o preenchimento do cadastro para digitar corretamente!")
-elif nome.endswith("o") or nome.endswith("e")  or nome.endswith("w") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n"):
+elif nome.endswith("o") or nome.endswith("e")  or nome.endswith("w") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m"):
     print(("Bem vindo(a) ")+(nome)+("!"))
     print ("Seu sexo é Masculino?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
@@ -73,7 +73,8 @@ elif optionEC=="S" or optionEC=="s":
     print(("EC: ")+str(EstadoCivil))
 elif optionEC!="C" or optionEC!="c" and optionEC!="F" or optionEC!="f" and EstadoCivil !="S" or optionEC!="s":
     print("Caractere inválido!")
-    print("Por favor ativar a função 'EC'(Estado Civil) no menu após o preenchimento do cadastro para digitar corretamente!") 
+    print("Por favor ativar a função 'EC'(Estado Civil) no menu após o preenchimento do cadastro para digitar corretamente!")
+    
 ##Função Nome
 def Nome():
     global nome
@@ -174,6 +175,7 @@ def consulta():
         print(("idade: ")+str(idade)+(" Anos"))
     else:
         print("Opção inválida!,por favor digite corretamente")
+        
 ##Menú de opções        
 opcao="menu"
 while opcao!="sair" or  opcao!="Sair" or opcao!="SAIR":

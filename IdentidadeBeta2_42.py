@@ -11,9 +11,9 @@ if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endsw
     print(("Bem vinda(o) ")+(nome)+("!"))
     print ("Seu sexo é Feminio?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
-    if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim":
+    if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim" or optionSX=="S" or optionSX=="s":
         sexo = "Feminino"
-    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao":
+    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" optionSX=="n":
         optionSX = str(input("Digite 'M' para Masculino ou então 'I' para Indefinido: "))
         if optionSX == "M" or optionSX=="m":
             sexo = "Masculino"
@@ -25,9 +25,9 @@ elif nome.endswith("o") or nome.endswith("e")  or nome.endswith("w") or nome.end
     print(("Bem vindo(a) ")+(nome)+("!"))
     print ("Seu sexo é Masculino?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
-    if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim":
+    if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim" or optionSX=="S" or optionSX=="s":
         sexo = "Masculino"
-    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao":
+    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" optionSX=="n":
         optionSX = str(input("Digite 'F' para Feminino ou então 'I' para Indefinido: "))
         if optionSX == "F" or optionSX=="f":
             sexo = "Feminino"

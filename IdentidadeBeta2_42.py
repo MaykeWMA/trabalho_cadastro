@@ -208,7 +208,8 @@ def deletar():
     elif delete =="idade" or delete=="Idade" or delete=="IDADE":
         idade = "registrar idade"
         print(idade)
-    
+    elif delete == "ALT" or delete=="Alt" or delete=="alt":
+        alterar()
     else:
         print("Opção inválida!, por favor digite corretamente")
 
@@ -224,6 +225,7 @@ def consulta():
     print("Para consultar seu SALÁRIO digite 'salario'")
     print("Para saber seu ESTADO CIVIL digite 'ec'")
     print("para consultar seu NOME digite 'nome'")
+    print("para alterar alguma informação digite 'alt'")
     consultar = input("E para ver sua sexualidade digite 'sexo': ")
     if consultar == "salario" or consultar=="Salario" or consultar=="SALARIO" or consultar=="salário" or consultar=="Salário" or consultar=="SALÁRIO":
         print(("Seu salário é de R$:")+str(salario))
@@ -235,6 +237,8 @@ def consulta():
         print(("Segundo informado seu nome é: ")+str(nome))
     elif consultar =="idade" or consultar=="Idade" or consultar=="IDADE":
         print(("idade: ")+str(idade)+(" Anos"))
+    elif delete == "ALT" or delete=="Alt" or delete=="alt":
+        alterar()
     else:
         print("Opção inválida!,por favor digite corretamente")
         

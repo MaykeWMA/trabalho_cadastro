@@ -5,15 +5,17 @@ optionSX = "str"
 idade = "float"
 EstadoCivil = "str"
 optionEC = "str"
+salario = "float"
+alt="alt"
 ##váriavel Nome e Sexo
 nome = str(input ("Qual o seu nome?: "))
-if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m"):
+if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m") or nome.endswith("u"):
     print(("Bem vinda(o) ")+(nome)+("!"))
     print ("Seu sexo é Feminio?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
     if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim" or optionSX=="S" or optionSX=="s":
         sexo = "Feminino"
-    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" optionSX=="n":
+    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" or optionSX=="ñ":
         optionSX = str(input("Digite 'M' para Masculino ou então 'I' para Indefinido: "))
         if optionSX == "M" or optionSX=="m":
             sexo = "Masculino"
@@ -21,13 +23,13 @@ if nome.endswith("a") or nome.endswith("i")  or nome.endswith("y") or nome.endsw
             sexo = "Indefinido"
     else:
         print("Por favor ativar a função 'sexo' no menu apos o preenchimento do cadastro para digitar corretamente!")
-elif nome.endswith("o") or nome.endswith("e")  or nome.endswith("w") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m"):
+elif nome.endswith("o") or nome.endswith("e")  or nome.endswith("w") or nome.endswith("s") or nome.endswith("l") or nome.endswith("n") or nome.endswith("m") or nome.endswith("u"):
     print(("Bem vindo(a) ")+(nome)+("!"))
     print ("Seu sexo é Masculino?")
     optionSX = str(input("Digite 'Sim' para confirmar, caso contrário digite 'Não': "))
     if optionSX == "Sim" or optionSX== "SIM" or optionSX=="sim" or optionSX=="S" or optionSX=="s":
         sexo = "Masculino"
-    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" optionSX=="n":
+    elif optionSX == "Não" or optionSX=="NÃO" or optionSX=="não" or optionSX=="Nao" or optionSX=="NAO" or optionSX=="nao" or optionSX=="N" or optionSX=="Ñ" or optionSX=="ñ":
         optionSX = str(input("Digite 'F' para Feminino ou então 'I' para Indefinido: "))
         if optionSX == "F" or optionSX=="f":
             sexo = "Feminino"
@@ -117,14 +119,15 @@ def Sexo():
     print("Qual o seu SEXO?")
     print("Para FEMININO digite 'F'")
     print("Para MASCULINO digite 'M'")
+    print("para INDEFINIDO digite 'I'")
     optionSX = str(input("E para Indefinido digite I: "))
-    if optionSX =="F":
+    if optionSX =="F" or optionSX=="f":
         sexo = "Feminimo"
         print(("Sexo:")+str(sexo))
-    elif optionSX == "M":
+    elif optionSX == "M" or optionSX=="m":
         sexo = "Masculino"
         print(("Sexo:")+str(sexo))
-    elif optionSX == "I":
+    elif optionSX == "I" or optionSX =="i":
         sexo = "Indefinido"
         print(("Sexo:")+str(sexo))
     else:
@@ -149,7 +152,66 @@ def EC():
         print(("EC: ")+str(EstadoCivil))
     elif optionEC!= "C" or optionEC!="c" and optionEC !="F" or optionEC!="f" and optionEC!="S" or optionEC!="s":
         print("Caractere inválido!")
-        
+
+#função alterar
+def alterar():
+    global sexo
+    global nome
+    global idade
+    global salario
+    print("Olá oque deseja alterar?")
+    print("Para ALTERAR seu nome digite nome")
+    print("Para ALTERAR seu sexo digite 'sexo'")
+    print("para ALTERAR sua idade digite 'idade'")
+    print("para ALTERAR seu estado civil digite 'ec'")
+    print("Para ALTERAR seu salário digite 'salario'")
+    print("para CONSULTAR alguma informação digite 'consulta'")
+    alt = input("Para DELETAR alguma informação digite 'del'")
+    if alt == "nome"or alt=="Nome"or alt=="NOME":
+        Nome()
+    elif alt == "idade"or alt=="Idade"or alt=="IDADE":
+        Idade1()
+    elif alt == "salario"or alt=="Salario"or alt=="SALARIO"or alt=="salário"or alt=="Salário"or alt=="SALÁRIO":
+        Salário()
+    elif alt == "sexo"or alt=="Sexo"or alt=="SEXO":
+        Sexo()
+    elif alt=="EC"or alt=="ec"or alt=="Ec":
+        EC()
+    elif alt=="consultar"or alt=="consulta"or alt=="Consultar"or alt=="Consulta"or alt=="CONSULTAR"or alt=="CONSULTA":
+        consulta()
+    elif alt=="del" or alt=="DEL" or alt=="Del":
+        deletar()
+    else:
+        print("Opção inválida!, por favor digite corretamente")
+    
+
+#função deletar informação
+def deletar():
+    global sexo
+    global nome
+    global idade
+    global salario
+    print("Olá, o que deseja delete?")
+    print("Para deletar sua IDADE digite 'idade'")
+    print("para deletar seu NOME digite 'nome'")
+    print("para alterar alguma informação digite 'alt'")
+    delete = input("E para ver sua sexualidade digite 'sexo': ")
+    if delete == "sexo"or delete=="Sexo"or delete=="SEXO":
+        optionSX = "i"
+        print(("Sexo:")+str(sexo))
+    elif delete =="salario" or delete=="Salario" or delete=="Salário" or delete == "salário":
+        salario ="Salário zerado!"
+        print(salario)
+    elif delete =="nome" or delete=="Nome"or delete=="NOME":
+        nome = "registrar novamente"
+        print(nome)
+    elif delete =="idade" or delete=="Idade" or delete=="IDADE":
+        idade = "registrar idade"
+        print(idade)
+    
+    else:
+        print("Opção inválida!, por favor digite corretamente")
+
 ##Função Consultar
 def consulta():
     global sexo
@@ -179,12 +241,13 @@ def consulta():
 ##Menú de opções        
 opcao="menu"
 while opcao!="sair" or  opcao!="Sair" or opcao!="SAIR":
-    print("Digite 'nome' para preencher seu Nome")
-    print("Para informar sua IDADE digite 'idade'")
-    print("Para informar seu SALÁRIO digite salario")
-    print("para informar seu SEXO digite 'sexo'")
-    print("Para informar seu ESTADO CIVIL digite 'EC'")
-    opcao = input("E para CONSULTAR digite 'consultar' ou então digite 'sair' para sair: ")
+    print("Digite 'nome' para ALTERAR seu Nome")
+    print("Para ALTERAR sua IDADE digite 'idade'")
+    print("Para ALTERAR seu SALÁRIO digite salario")
+    print("Para ALTERAR seu SEXO digite 'sexo'")
+    print("Para ALTERAR seu ESTADO CIVIL digite 'EC'")
+    print("Para DELETAR alguma informação digite 'del'")
+    opcao = input("Ou para CONSULTAR digite 'consultar' ou então digite 'sair' para sair: ")
     if opcao == "nome"or opcao=="Nome"or opcao=="NOME":
         Nome()
     elif opcao == "idade"or opcao=="Idade"or opcao=="IDADE":
